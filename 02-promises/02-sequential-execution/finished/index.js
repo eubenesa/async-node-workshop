@@ -1,9 +1,7 @@
 import { writeFile, unlink } from "fs/promises";
 
-let delay = time =>
-  new Promise(resolves =>
-    setTimeout(resolves, time * 1000)
-  );
+let delay = (time) =>
+  new Promise((resolve) => setTimeout(resolve, time * 1000));
 
 const doStuffSequentially = () =>
   Promise.resolve()
